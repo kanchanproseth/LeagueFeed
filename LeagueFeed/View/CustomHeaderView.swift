@@ -31,7 +31,7 @@ class CustomHeaderView: UIView {
     
     let titleLabel: UILabel = {
         let label = UILabel()
-        label.text = NSLocalizedString("LeagueFeed", comment: "")
+        label.text = NSLocalizedString("LeagueNews", comment: "")
         label.textAlignment = .center
         label.textColor = .white
         label.shadowOffset = CGSize(width: 1, height: 1)

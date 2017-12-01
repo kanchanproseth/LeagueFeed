@@ -1,5 +1,5 @@
 //
-//  ChampCell.swift
+//  ArticleCell.swift
 //  LeagueFeed
 //
 //  Created by kanchanproseth on 11/13/17.
@@ -10,9 +10,9 @@ import UIKit
 import SDWebImage
 import MaterialComponents
 
-class ChampCell: UICollectionViewCell {
+class ArticleCell: UICollectionViewCell {
     
-    static let cellID = "ChampCellID"
+    static let cellID = "ArticleCellID"
     static let cellHeight: CGFloat = 370.0
     static let cellPadding: CGFloat = 8.0
     
@@ -31,23 +31,23 @@ class ChampCell: UICollectionViewCell {
         return self.layer as? MDCShadowLayer
     }
     
-//    var article: Article? {
-//        didSet {
-//            guard let article = article else {
-//                return
-//            }
-//
-//            imageView.sd_setImage(with: article.imageURL)
-//            titleLabel.text = article.title
-//            subtitleLabel.text = article.description
-//            if let date = article.publishedAt {
-//                dateLabel.isHidden = false
-//                dateLabel.text = Formatters.shortDateFormatter.string(from: date)
-//            } else {
-//                dateLabel.isHidden = true
-//            }
-//        }
-//    }
+    var article: Article? {
+        didSet {
+            guard let article = article else {
+                return
+            }
+
+            imageView.sd_setImage(with: article.imageURL)
+            titleLabel.text = article.title
+            subtitleLabel.text = article.description
+            if let date = article.publishedAt {
+                dateLabel.isHidden = false
+                dateLabel.text = Formatters.shortDateFormatter.string(from: date)
+            } else {
+                dateLabel.isHidden = true
+            }
+        }
+    }
     
     override func awakeFromNib() {
         super.awakeFromNib()
